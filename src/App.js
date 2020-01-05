@@ -1,25 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+const Header = () => {
+  return (
+      <header>
+          <div className="header-logo">makotoo.com</div>
+          <div className="header-list">
+            <ul>
+              <li>あそぶ</li>
+              <li>makotooについて</li>
+            </ul>
+          </div>
+      </header>
+  )
+}
+
+const Footer = () => {
+  return (
+      <footer>
+        <div className="footer-logo">makotoo.com</div>
+        <div className="footer-list">
+          <ul>
+            <li>あそぶ</li>
+            <li>makotooについて</li>
+          </ul>
+        </div>
+      </footer>
+  )
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <main>
+        <p>あああああ</p>
+        <p>あああああ</p>
+        <p>あああああ</p>
+        <p>あああああ</p>
+        <p>ABCD</p>
+      </main>
+      <Footer />
+    </React.Fragment>
   );
 }
 

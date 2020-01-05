@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+    background-color: #26d0c9;
+    color: #fff;
+    height: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    float: left;
+    line-height: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-list li {
+    float: left;
+    font-size: 14px;
+    line-height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+    font-size: 40px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+    background-color: #2f5167;
+    color: #ffffff;
+    height: 100px;
+    padding: 10px;
+}
+
+.footer-logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    float: left;
+    line-height: 100px;
+}
+
+.footer-list {
+    float: right;
+    font-size: 12px;
 }
