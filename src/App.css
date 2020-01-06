@@ -7,30 +7,45 @@ ul {
 header {
     background-color: #26d0c9;
     color: #fff;
-    height: 80px;
+    height: 60px;
 }
 
 .header-logo {
     font-family: 'Fredoka One', cursive;
     font-size: 20px;
     float: left;
-    line-height: 80px;
+    line-height: 60px;
     margin-left: 15px;
     margin-right: 15px;
+    cursor: pointer;
 }
 
-.header-list li {
+.header-logo:hover {
+    color: #ff0;
+}
+
+nav {
+    float: left;
+    line-height: 60px;
+}
+
+nav span {
     float: left;
     font-size: 14px;
-    line-height: 80px;
+    line-height: 60px;
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
+}
+nav span:hover {
+    color: #ff0;
 }
 
 main {
     font-size: 40px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
 
 footer {
     background-color: #2f5167;
@@ -44,9 +59,24 @@ footer {
     font-size: 18px;
     float: left;
     line-height: 100px;
+    cursor: pointer;
+}
+
+.footer-logo:hover {
+    color: #ff0;
 }
 
 .footer-list {
     float: right;
     font-size: 12px;
+    cursor: pointer;
+}
+
+.footer-list li{
+    cursor: pointer;
+    padding: 5px 0px;
+}
+
+.footer-list li:hover {
+    color: #ff0;
 }
