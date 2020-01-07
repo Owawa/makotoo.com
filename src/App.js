@@ -1,54 +1,38 @@
 import React, { Component } from 'react';
 import './App.css';
-import PropTypes from 'prop-types';
-
-const Header = (props) => {
-  return (
-      <header>
-        <div className="header-logo" onClick={props.handleTopLinkPushed}>makotoo.com</div>
-          <nav>
-            <span onClick={props.handlePlayLinkPushed}>あそぶ</span>
-            <span>makotooについて</span>
-          </nav>
-      </header>
-  )
-}
-
-Header.propTypes = {
-  handlePlayLinkPushed : PropTypes.func,
-  handleTopLinkPushed : PropTypes.func
-}
-
-const Footer = (props) => {
-  return (
-      <footer>
-        <div className="footer-logo" onClick={props.handleTopLinkPushed}>makotoo.com</div>
-        <ul className="footer-list">
-          <li onClick={props.handlePlayLinkPushed}>あそぶ</li>
-          <li>makotooについて</li>
-        </ul>
-      </footer>
-  )
-}
-
-Footer.propTypes = {
-  handlePlayLinkPushed : PropTypes.func
-}
-
+import Header from './Header';
+import Footer from './Footer';
 
 class App extends Component {
-
   constructor(props) {
     super(props);
-    this.state = { currentContent : "TOP" };
-  }
-
-  playLinkPushed () {
-    this.setState({ currentContent : "PLAY" });
+    const content = window.location.hash;
+    if  (content === "#PLAY") {
+      this.state = { currentContent : "PLAY" };
+      window.history.replaceState("PLAY", null, "#PLAY");
+    } else if  (content === "#ABOUT") {
+      this.state = { currentContent : "ABOUT" };
+      window.history.replaceState("ABOUT", null, "#ABOUT");
+    } else {
+      this.state = { currentContent : "TOP" };
+      window.history.replaceState("TOP", null, "#TOP");
+    }
+    window.App = this;
   }
 
   topLinkPushed () {
     this.setState({ currentContent : "TOP" });
+    window.history.pushState("TOP", null, "#TOP");
+  }
+
+  playLinkPushed () {
+    this.setState({ currentContent : "PLAY" });
+    window.history.pushState("PLAY", null, "#PLAY");
+  }
+
+  aboutLinkPushed () {
+    this.setState({ currentContent : "ABOUT" });
+    window.history.pushState("ABOUT", null, "#ABOUT");
   }
 
   render() {
@@ -63,6 +47,8 @@ class App extends Component {
              </main>;
     } else if(this.state.currentContent === "PLAY") {
       Main = <main>play</main>;
+    } else if (this.state.currentContent === "ABOUT") {
+      Main = <main>About makotoo</main>;
     }
 
     return (
@@ -70,11 +56,13 @@ class App extends Component {
       <Header
         handlePlayLinkPushed={this.playLinkPushed.bind(this)}
         handleTopLinkPushed={this.topLinkPushed.bind(this)}
-        />
+        handleAboutLinkPushed={this.aboutLinkPushed.bind(this)}
+      />
       {Main}
       <Footer
         handlePlayLinkPushed={this.playLinkPushed.bind(this)}
         handleTopLinkPushed={this.topLinkPushed.bind(this)}
+        handleAboutLinkPushed={this.aboutLinkPushed.bind(this)}
       />
       </React.Fragment>
     );
