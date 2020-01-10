@@ -6,38 +6,35 @@ import Footer from './Footer';
 class App extends Component {
   constructor(props) {
     super(props);
-    const content = window.location.hash;
-    if  (content === "#PLAY") {
-      this.state = { currentContent : "PLAY" };
-      window.history.replaceState("PLAY", null, "#PLAY");
-    } else if  (content === "#ABOUT") {
-      this.state = { currentContent : "ABOUT" };
-      window.history.replaceState("ABOUT", null, "#ABOUT");
-    } else {
-      this.state = { currentContent : "TOP" };
-      window.history.replaceState("TOP", null, "#TOP");
-    }
+
+    const stateList = ["TOP", "PLAY", "ABOUT"];
+    const initialPath = window.location.pathname.substring(1);
+    const content = stateList.includes(initialPath) ? initialPath : "TOP";
+
+    this.state = { currentContent : content };
+    window.history.replaceState(content, null, content);
+
     window.App = this;
   }
 
   topLinkPushed () {
     this.setState({ currentContent : "TOP" });
-    window.history.pushState("TOP", null, "#TOP");
+    window.history.pushState("TOP", null, "TOP");
   }
 
   playLinkPushed () {
     this.setState({ currentContent : "PLAY" });
-    window.history.pushState("PLAY", null, "#PLAY");
+    window.history.pushState("PLAY", null, "PLAY");
   }
 
   aboutLinkPushed () {
     this.setState({ currentContent : "ABOUT" });
-    window.history.pushState("ABOUT", null, "#ABOUT");
+    window.history.pushState("ABOUT", null, "ABOUT");
   }
 
   render() {
     let Main = null;
-    if(this.state.currentContent === "TOP") {
+    if (this.state.currentContent === "TOP") {
       Main = <main>
                <p>あああああ</p>
                <p>あああああ</p>
