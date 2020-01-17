@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Header extends Component {
+export default class Header extends Component {
   render() {
     return (
       <header>
-        <div className="header-logo" onClick={this.props.handleTopLinkPushed}>makotoo.com</div>
+        <div className="header-logo" onClick={this.props.topLinkPushed}>makotoo.com</div>
           <nav>
-            <span onClick={this.props.handlePlayLinkPushed}>あそぶ</span> 
-            <span onClick={this.props.handleAboutLinkPushed}>makotooについて</span>
+            <span onClick={this.props.playLinkPushed}>あそぶ</span> 
+            <span onClick={this.props.aboutLinkPushed}>makotooについて</span>
           </nav>
       </header>
     )
@@ -20,5 +20,3 @@ class Header extends Component {
     handleAboutLinkPushed : PropTypes.func
   };
 }
-
-export default Header;

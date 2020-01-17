@@ -37,15 +37,151 @@ nav span {
     margin-right: 10px;
     cursor: pointer;
 }
+
 nav span:hover {
     color: #ff0;
 }
 
 main {
-    font-size: 40px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #000;
 }
 
+.top-phrase {
+    font-size: 6vw;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.top-phrase p {
+    transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+}
+
+.top-phrase-line {
+    white-space: pre;
+}
+
+.about-section {
+    margin: 30px 30px;
+}
+
+.about-section h1 {
+    font-size: 30px;
+}
+
+.section-title {
+    border-bottom: 3px solid #000;
+}
+
+.favorite-item-list {
+    height: auto;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.favorite-item {
+    width: 120px;
+    height: 130px;
+    margin: 10px;
+    border: 4px ridge #999;
+    background-color: #ddd;
+    float: left;
+    text-align: center;
+    transition: 0.8s;
+}
+
+.favorite-item:hover {
+    letter-spacing: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 4px ridge #fff;
+    box-shadow: 5px 5px 10px rgba(200,200,200,4);
+}
+
+.favorite-item p, img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+}
+
+.modal-box {
+    width: 80vw;
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-header {
+    background-color: #fa0;
+    border-radius: 8px 8px 0 0;
+    border: 2px solid #fff;
+    font-size: 24px;
+}
+
+.modal-content-list {
+    height: auto;
+}
+
+.modal-content {
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid #fa0;
+}
+
+.modal-content-main {
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;;
+}
+
+img.modal-content-img {
+    width: 100px;
+    margin: 10px;
+}
+
+.modal-content-main div {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-content-main a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-close-btn {
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #fa0;
+}
+
+.modal-close-btn:hover {
+    opacity: 0.6;
+}
 
 footer {
     background-color: #2f5167;
