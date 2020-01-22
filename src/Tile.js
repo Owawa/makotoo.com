@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Tile extends Component {
   constructor (props) {
@@ -44,7 +45,7 @@ export default class Tile extends Component {
     }
     return (
       <React.Fragment>
-        <div className="favorite-item" onClick={this.handleTileClick.bind(this)}>
+        <div className="tile" onClick={this.handleTileClick.bind(this)}>
           <p>{this.props.name}</p>
           <img src={this.props.icon} width="64" height="64" alt="cat" />
         </div>
@@ -52,4 +53,10 @@ export default class Tile extends Component {
       </React.Fragment>
     );
   }
+
+  static propTypes = {
+    name: PropTypes.string,
+    icon: PropTypes.node,
+    items: PropTypes.array
+  };
 }

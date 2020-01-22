@@ -4,13 +4,12 @@ import Tile from './Tile';
 import gamepadIcon from './gamepad.svg';
 import bookIcon from './book.svg';
 import catIcon from './cat.svg';
+import drinkIcon from './drink.svg';
 
 import hinamatsuri from './hinamatsuri.jpg'
 import abyss from './abyss.jpg'
-
 import brawlstars from './brawlstars.jpg'
 import chunithmImg from './chunithm.jpg'
-
 import mashiro from './mashiro.jpg'
 import shoulderCat from './shoulder_cat.jpg'
 
@@ -30,6 +29,9 @@ export default class About extends Component {
       cats: [
         {name: "ねこかます", img: mashiro, desc: "ウチューネコちゃん.", url: "https://www.youtube.com/channel/UCVnXhulsNpFgxCpplJLKsUg"},
         {name: "肩に乗るやつ",  img: shoulderCat, desc: "はやくこれになりたい...", url: "https://www.youtube.com/watch?v=hPMYwcSi3eg"}
+      ],
+      drinks: [
+        {name: "工事中", img: "", desc: "", url: ""}
       ]
     };
     
@@ -37,7 +39,7 @@ export default class About extends Component {
       <main>
         <div className="about-section">
           <h1 className="section-title">makotooとは？</h1>
-          <div className="profile-item-list">
+          <div className="item-list">
             <p>なまえ : makotoo(マコトゥー)</p>
             <p>Twitter : ひみつ</p>
             <p>見た目 : 草野マサムネ</p>
@@ -45,10 +47,11 @@ export default class About extends Component {
         </div>
         <div className="about-section">
           <h1 className="section-title">Favorite</h1>
-          <div className="favorite-item-list">
+          <div className="item-list">
             <Tile name="Comics" icon={bookIcon} items={favoriteItems.comics} />
             <Tile name="Games" icon={gamepadIcon} items={favoriteItems.games} />
             <Tile name="Cats" icon={catIcon} items={favoriteItems.cats} />
+            <Tile name="Drinks" icon={drinkIcon} items={favoriteItems.drinks} />
           </div>
         </div>
       </main>

@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import Top from './Top';
+import Play from './Play';
 import About from './About';
 
 class App extends Component {
@@ -39,7 +40,7 @@ class App extends Component {
     if (this.state.currentContent === "#TOP") {
       Main = <Top />;
     } else if(this.state.currentContent === "#PLAY") {
-      Main = <main>play</main>;
+      Main = <Play />;
     } else if (this.state.currentContent === "#ABOUT") {
       Main = <About />;
     }

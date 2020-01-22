@@ -63,26 +63,23 @@ main {
     white-space: pre;
 }
 
-.about-section {
+.about-section, .play-section {
     margin: 30px 30px;
 }
 
-.about-section h1 {
-    font-size: 30px;
-}
-
 .section-title {
+    font-size: 30px;
     border-bottom: 3px solid #000;
 }
 
-.favorite-item-list {
+.item-list {
     height: auto;
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
 }
 
-.favorite-item {
+.tile {
     width: 120px;
     height: 130px;
     margin: 10px;
@@ -93,7 +90,7 @@ main {
     transition: 0.8s;
 }
 
-.favorite-item:hover {
+.tile:hover {
     letter-spacing: 4px;
     background-color: #fff;
     cursor: pointer;
@@ -101,7 +98,7 @@ main {
     box-shadow: 5px 5px 10px rgba(200,200,200,4);
 }
 
-.favorite-item p, img {
+.tile p, img {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -152,6 +149,11 @@ main {
     align-items: center;;
 }
 
+.modal-content-main:hover {
+    opacity: 0.8;
+    background-color: #ddd;
+}
+
 img.modal-content-img {
     width: 100px;
     margin: 10px;
@@ -181,6 +183,13 @@ img.modal-content-img {
 
 .modal-close-btn:hover {
     opacity: 0.6;
+}
+
+img.umaru-img-before, img.umaru-img-after {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 200px;
 }
 
 footer {
@@ -215,4 +224,9 @@ footer {
 
 .footer-list li:hover {
     color: #ff0;
+}
+
+#neta-source{
+    text-align: right;
+    font-size: 12px;
 }
